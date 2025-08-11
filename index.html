@@ -49,10 +49,11 @@
     .btn{display:inline-block;border:1px solid var(--acc);color:var(--acc);padding:9px 12px;border-radius:10px;font-weight:600}
     .btn:hover{background:color-mix(in oklab, var(--acc) 10%, var(--bg))}
     nav{display:flex;gap:12px;flex-wrap:wrap;grid-column:1/-1}
-    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-bottom: 18px;}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;}
     @media (max-width:900px){.grid{grid-template-columns:1fr} header{grid-template-columns:auto 1fr}}
+    /* ADDED RULE: This ensures sections inside the new columns have vertical spacing. */
+    .grid > div > section:not(:first-child) { margin-top: 18px; }
     section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
-    main > section:not(:first-child) { margin-top: 18px; }
     h2{margin:0 0 10px 0;font-size:1rem; font-weight: 800;}
     ul{margin:6px 0;padding-left:18px}
     .pill{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:4px 10px;margin:4px 6px 0 0;background:#fff;font-size:.92rem}
@@ -98,115 +99,118 @@
 
     <main>
         <div class="grid">
-            <section id="profile">
-            <h2>Profile</h2>
-            <p class="small">Graduate student focusing on high-energy/particle physics and computational methods. Strong in <b>Python</b>, <b>ROOT/C++</b>, simulation and numerical modelling. B.Sc. thesis studied radon particle formation/measurement and deep-learning-based seismic correlations. Current aim: apply computational techniques to <b>CMS</b> analyses. Training: ML4FP 2025 (CERN, online); CMSDAS 2024 materials (non-official participant).</p>
-            <div class="sp"></div>
-            <h2>Highlights</h2>
             <div>
-                <span class="pill">C++ · ROOT</span>
-                <span class="pill">Python · NumPy · Pandas</span>
-                <span class="pill">Scikit-learn · TensorFlow · PyTorch</span>
-                <span class="pill">Simulation (COMSOL, SimFlow)</span>
-                <span class="pill">MATLAB</span>
-                <span class="pill">Linux · Git</span>
+                <section id="profile">
+                    <h2>Profile</h2>
+                    <p class="small">Graduate student focusing on high-energy/particle physics and computational methods. Strong in <b>Python</b>, <b>ROOT/C++</b>, simulation and numerical modelling. B.Sc. thesis studied radon particle formation/measurement and deep-learning-based seismic correlations. Current aim: apply computational techniques to <b>CMS</b> analyses. Training: ML4FP 2025 (CERN, online); CMSDAS 2024 materials (non-official participant).</p>
+                    <div class="sp"></div>
+                    <h2>Highlights</h2>
+                    <div>
+                        <span class="pill">C++ · ROOT</span>
+                        <span class="pill">Python · NumPy · Pandas</span>
+                        <span class="pill">Scikit-learn · TensorFlow · PyTorch</span>
+                        <span class="pill">Simulation (COMSOL, SimFlow)</span>
+                        <span class="pill">MATLAB</span>
+                        <span class="pill">Linux · Git</span>
+                    </div>
+                </section>
+
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <div class="cards">
+                        <article class="card">
+                            <img class="thumb" src="img/project-radon.png" alt="Radon–Seismic ML project thumbnail" loading="lazy" decoding="async">
+                            <h3>Radon–Seismic ML</h3>
+                            <p>Deep learning–based analysis of radon particle measurements from multiple detectors to search for correlations with seismic events. Includes data preprocessing, anomaly detection, and statistical validation.</p>
+                            <div class="tags">
+                            <span class="badge">Python</span><span class="badge">TensorFlow</span><span class="badge">Scikit-learn</span><span class="badge">Prophet</span><span class="badge">Time-series</span>
+                            </div>
+                            <p><em>Private Repository</em></p>
+                        </article>
+                        <article class="card">
+                            <img class="thumb" src="img/project-cmsdas.png" alt="CMSDAS exercises thumbnail" loading="lazy" decoding="async">
+                            <h3><a href="https://github.com/beriaacan/cmsdas-2024-exercises" target="_blank" rel="noopener">CMSDAS 2024 Exercises</a></h3>
+                            <p>Exercises and workflows from the CMS Data Analysis School, covering histogramming, fitting, event selection, and ROOT-based CMS analysis techniques.</p>
+                            <div class="tags">
+                            <span class="badge">ROOT</span><span class="badge">C++</span><span class="badge">Python</span>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img class="thumb" src="img/project-qm.png" alt="Quantum Mechanics solvers thumbnail" loading="lazy" decoding="async">
+                            <h3><a href="https://github.com/beriaacan/qm-python-solvers" target="_blank" rel="noopener">QM Python Solvers</a></h3>
+                            <p>Python-based solvers for quantum mechanics problems including eigenvalue calculations, shooting method, and finite-difference solutions for Schrödinger’s equation.</p>
+                            <div class="tags">
+                            <span class="badge">Python</span><span class="badge">Numerical Methods</span><span class="badge">Matplotlib</span>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img class="thumb" src="img/project-ml4fp.png" alt="ML4FP 2025 thumbnail" loading="lazy" decoding="async">
+                            <h3><a href="https://github.com/beriaacan/ML4FP-2025" target="_blank" rel="noopener">Machine Learning for Fundamental Physics School (ML4FP) 2025</a></h3>
+                            <p>Participated in CERN’s online school on modern machine learning techniques applied to fundamental physics, covering topics such as supervised/unsupervised learning, deep learning, and applications to particle physics datasets.</p>
+                            <div class="tags">
+                            <span class="badge">Machine Learning</span><span class="badge">Particle Physics</span><span class="badge">CERN</span>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img class="thumb" src="img/project-desalination.png" alt="Desalination simulation thumbnail" loading="lazy" decoding="async">
+                            <h3>Seawater Desalination — CFD & COMSOL</h3>
+                            <p>CFD and multiphysics simulations of seawater desalination processes. Includes flow regime analysis, parametric sweeps, and comparative performance modelling.</p>
+                            <div class="tags">
+                            <span class="badge">SimFlow</span><span class="badge">COMSOL</span><span class="badge">Numerical Modeling</span>
+                            </div>
+                            <p><em>Private Repository</em></p>
+                        </article>
+                    </div>
+                </section>
+                
+                <section id="education">
+                    <h2>Education</h2>
+                    <ul>
+                        <li><span class="k">Istanbul Technical University (ITU)</span> — <span class="k">M.Sc. Physics Engineering</span> (ongoing). Specialization: particle & computational physics. Thesis: integrate CMS data analysis with computational methods. <span class="meta">Istanbul, Türkiye · 2024–present</span></li>
+                        <li><span class="k">Istanbul Technical University (ITU)</span> — <span class="k">B.Sc. Physics Engineering</span>, <b>3rd in department</b>. Thesis: radon formation/measurement; DL-based seismic correlation. <span class="meta">Istanbul, Türkiye · 2020–2024</span></li>
+                    </ul>
+                </section>
+
+                <section id="training">
+                    <h2>Training & Schools</h2>
+                    <ul>
+                    <li>Machine Learning for Fundamental Physics School (ML4FP) 2025 — CERN (online)</li>
+                    <li>CMSDAS 2024 — materials self-study</li>
+                    </ul>
+                </section>
             </div>
-            </section>
-            <section>
-            <h2>Quick Links</h2>
-            <ul>
-                <li><a href="https://github.com/beriaacan" target="_blank" rel="noopener">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/beriaacan/" target="_blank" rel="noopener">LinkedIn</a></li>
-                <li><a href="CV.pdf" download>Download CV (PDF)</a></li>
-            </ul>
-            <h2>Downloads</h2>
-            <ul><li><a href="CV.pdf" download>CV (PDF)</a></li></ul>
-            </section>
+            
+            <div>
+                <section>
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="https://github.com/beriaacan" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/beriaacan/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="CV.pdf" download>Download CV (PDF)</a></li>
+                    </ul>
+                </section>
+                
+                <section id="skills">
+                    <h2>Technical Skills</h2>
+                    <ul>
+                        <li><span class="k">Programming:</span> C++, Python (NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch), MATLAB, LaTeX</li>
+                        <li><span class="k">Physics software:</span> ROOT, COMSOL, SimFlow</li>
+                        <li><span class="k">Tools/OS:</span> Linux, Git</li>
+                        <li><span class="k">Competencies:</span> Particle physics data analysis; simulation & modelling; ML for physics; statistical analysis</li>
+                    </ul>
+                </section>
+
+                <section id="contact">
+                    <h2>Contact</h2>
+                    <ul>
+                        <li>Email: <a href="mailto:canber20@itu.edu.tr">canber20@itu.edu.tr</a></li>
+                        <li>Location: Istanbul, Türkiye</li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/beriaacan/" target="_blank" rel="noopener">beriaacan</a></li>
+                        <li>GitHub: <a href="https://github.com/beriaacan" target="_blank" rel="noopener">beriaacan</a></li>
+                    </ul>
+                </section>
+            </div>
         </div>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="cards">
-            <article class="card">
-                <img class="thumb" src="img/project-radon.png" alt="Radon–Seismic ML project thumbnail" loading="lazy" decoding="async">
-                <h3>Radon–Seismic ML</h3>
-                <p>Deep learning–based analysis of radon particle measurements from multiple detectors to search for correlations with seismic events. Includes data preprocessing, anomaly detection, and statistical validation.</p>
-                <div class="tags">
-                <span class="badge">Python</span><span class="badge">TensorFlow</span><span class="badge">Scikit-learn</span><span class="badge">Prophet</span><span class="badge">Time-series</span>
-                </div>
-                <p><em>Private Repository</em></p>
-            </article>
-            <article class="card">
-                <img class="thumb" src="img/project-cmsdas.png" alt="CMSDAS exercises thumbnail" loading="lazy" decoding="async">
-                <h3><a href="https://github.com/beriaacan/cmsdas-2024-exercises" target="_blank" rel="noopener">CMSDAS 2024 Exercises</a></h3>
-                <p>Exercises and workflows from the CMS Data Analysis School, covering histogramming, fitting, event selection, and ROOT-based CMS analysis techniques.</p>
-                <div class="tags">
-                <span class="badge">ROOT</span><span class="badge">C++</span><span class="badge">Python</span>
-                </div>
-            </article>
-            <article class="card">
-                <img class="thumb" src="img/project-qm.png" alt="Quantum Mechanics solvers thumbnail" loading="lazy" decoding="async">
-                <h3><a href="https://github.com/beriaacan/qm-python-solvers" target="_blank" rel="noopener">QM Python Solvers</a></h3>
-                <p>Python-based solvers for quantum mechanics problems including eigenvalue calculations, shooting method, and finite-difference solutions for Schrödinger’s equation.</p>
-                <div class="tags">
-                <span class="badge">Python</span><span class="badge">Numerical Methods</span><span class="badge">Matplotlib</span>
-                </div>
-            </article>
-            <article class="card">
-                <img class="thumb" src="img/project-ml4fp.png" alt="ML4FP 2025 thumbnail" loading="lazy" decoding="async">
-                <h3><a href="https://github.com/beriaacan/ML4FP-2025" target="_blank" rel="noopener">Machine Learning for Fundamental Physics School (ML4FP) 2025</a></h3>
-                <p>Participated in CERN’s online school on modern machine learning techniques applied to fundamental physics, covering topics such as supervised/unsupervised learning, deep learning, and applications to particle physics datasets.</p>
-                <div class="tags">
-                <span class="badge">Machine Learning</span><span class="badge">Particle Physics</span><span class="badge">CERN</span>
-                </div>
-            </article>
-            <article class="card">
-                <img class="thumb" src="img/project-desalination.png" alt="Desalination simulation thumbnail" loading="lazy" decoding="async">
-                <h3>Seawater Desalination — CFD & COMSOL</h3>
-                <p>CFD and multiphysics simulations of seawater desalination processes. Includes flow regime analysis, parametric sweeps, and comparative performance modelling.</p>
-                <div class="tags">
-                <span class="badge">SimFlow</span><span class="badge">COMSOL</span><span class="badge">Numerical Modeling</span>
-                </div>
-                <p><em>Private Repository</em></p>
-            </article>
-            </div>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-            <li><span class="k">Istanbul Technical University (ITU)</span> — <span class="k">M.Sc. Physics Engineering</span> (ongoing). Specialization: particle & computational physics. Thesis: integrate CMS data analysis with computational methods. <span class="meta">Istanbul, Türkiye · 2024–present</span></li>
-            <li><span class="k">Istanbul Technical University (ITU)</span> — <span class="k">B.Sc. Physics Engineering</span>, <b>3rd in department</b>. Thesis: radon formation/measurement; DL-based seismic correlation. <span class="meta">Istanbul, Türkiye · 2020–2024</span></li>
-            </ul>
-        </section>
-
-        <section id="training">
-            <h2>Training & Schools</h2>
-            <ul>
-            <li>Machine Learning for Fundamental Physics School (ML4FP) 2025 — CERN (online)</li>
-            <li>CMSDAS 2024 — materials self-study</li>
-            </ul>
-        </section>
-
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <ul>
-            <li><span class="k">Programming:</span> C++, Python (NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch), MATLAB, LaTeX</li>
-            <li><span class="k">Physics software:</span> ROOT, COMSOL, SimFlow</li>
-            <li><span class="k">Tools/OS:</span> Linux, Git</li>
-            <li><span class="k">Competencies:</span> Particle physics data analysis; simulation & modelling; ML for physics; statistical analysis</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <ul>
-            <li>Email: <a href="mailto:canber20@itu.edu.tr">canber20@itu.edu.tr</a></li>
-            <li>Location: Istanbul, Türkiye</li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/beriaacan/" target="_blank" rel="noopener">beriaacan</a></li>
-            <li>GitHub: <a href="https://github.com/beriaacan" target="_blank" rel="noopener">beriaacan</a></li>
-            </ul>
-        </section>
     </main>
 
     <footer>Last updated: <span id="lu"></span> · © Beria Ayşenur Can</footer>
