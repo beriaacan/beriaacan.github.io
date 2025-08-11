@@ -1,239 +1,226 @@
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Beria Ayşenur Can — Particle & Computational Physics</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beria Ayşenur Can — Particle & Computational Physics</title>
 
-  <!-- Meta -->
-  <meta name="description" content="M.Sc. Physics Engineering (ITU). Particle & computational physics; ROOT/C++; Python; detector physics; simulation; ML for fundamental physics.">
-  <meta property="og:title" content="Beria Ayşenur Can — Physics">
-  <meta property="og:description" content="Particle & Computational Physics — ROOT, C++, Python, detector physics, simulation, ML4FP, CMSDAS.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="img/og-image.png">
+  <meta name="description" content="M.Sc. Physics Engineering (ITU). Particle & computational physics; ROOT/C++; Python; detector physics; simulation; ML for fundamental physics.">
+  <meta property="og:title" content="Beria Ayşenur Can — Physics">
+  <meta property="og:description" content="Particle & Computational Physics — ROOT, C++, Python, detector physics, simulation, ML4FP, CMSDAS.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/og-image.png">
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
-  <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+  <meta name="theme-color" content="#ffffff">
 
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Beria Ayşenur Can",
-    "affiliation":{"@type":"CollegeOrUniversity","name":"Istanbul Technical University"},
-    "jobTitle":"Graduate Student",
-    "url":"https://beriaacan.github.io",
-    "sameAs":["https://www.linkedin.com/in/beriaacan/","https://github.com/beriaacan"]
-  }
-  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Beria Ayşenur Can",
+    "affiliation":{"@type":"CollegeOrUniversity","name":"Istanbul Technical University"},
+    "jobTitle":"Graduate Student",
+    "url":"https://beriaacan.github.io",
+    "sameAs":["https://www.linkedin.com/in/beriaacan/","https://github.com/beriaacan"]
+  }
+  </script>
 
-  <!-- Styles -->
-  <style>
-    :root{--fg:#0b0b0f;--muted:#5a5f6a;--bg:#fff;--acc:#1a73e8;--card:#f7f8fb;--border:#e6e8ef}
-    [data-theme="dark"]{--fg:#e8eaf1;--muted:#a7afbd;--bg:#0b0f16;--acc:#77a8ff;--card:#121724;--border:#273046}
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-    a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
-    .wrap{max-width:1024px;margin:0 auto;padding:28px}
-    header{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;margin-bottom:14px}
-    .avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid var(--border)}
-    .brand{display:flex;align-items:center;gap:10px}
-    .logo{width:32px;height:32px}
-    .name{font-size:1.7rem;font-weight:800}
-    .sub{color:var(--muted)}
-    .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-    .btn{display:inline-block;border:1px solid var(--acc);color:var(--acc);padding:9px 12px;border-radius:10px;font-weight:600}
-    .btn:hover{background:color-mix(in oklab, var(--acc) 10%, var(--bg))}
-    nav{display:flex;gap:12px;flex-wrap:wrap;grid-column:1/-1}
-    nav a{font-weight:600}
-    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr} header{grid-template-columns:auto 1fr}}
-    section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
-    h2{margin:0 0 10px 0;font-size:1.1rem}
-    ul{margin:6px 0;padding-left:18px}
-    .pill{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:4px 10px;margin:4px 6px 0 0;background:#fff;font-size:.92rem}
-    [data-theme="dark"] .pill{background:#0f1420}
-    .meta{color:var(--muted);font-size:.92rem}
-    footer{margin-top:16px;color:var(--muted);font-size:.9rem}
-    .k{font-weight:600}
-    .sp{height:8px}
-    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    @media (max-width:780px){.cards{grid-template-columns:1fr}}
-    .card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:12px}
-    .card h3{margin:0 0 6px 0;font-size:1rem}
-    .card .tags{margin-top:6px}
-    .badge{display:inline-block;border:1px solid var(--border);border-radius:8px;padding:3px 8px;margin-right:6px;font-size:.85rem}
-    .thumb{width:100%;height:auto;border-radius:10px;border:1px solid var(--border);margin-bottom:8px}
-    .toggle{cursor:pointer}
-  </style>
+  <style>
+    :root{--fg:#0b0b0f;--muted:#5a5f6a;--bg:#fff;--acc:#1a73e8;--card:#f7f8fb;--border:#e6e8ef}
+    [data-theme="dark"]{--fg:#e8eaf1;--muted:#a7afbd;--bg:#0b0f16;--acc:#77a8ff;--card:#121724;--border:#273046}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:1024px;margin:0 auto;padding:28px}
+    header{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;margin-bottom:14px}
+    .avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid var(--border)}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:32px;height:32px}
+    .name{font-size:1.7rem;font-weight:800}
+    .sub{color:var(--muted)}
+    .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .btn{display:inline-block;border:1px solid var(--acc);color:var(--acc);padding:9px 12px;border-radius:10px;font-weight:600}
+    .btn:hover{background:color-mix(in oklab, var(--acc) 10%, var(--bg))}
+    nav{display:flex;gap:12px;flex-wrap:wrap;grid-column:1/-1}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-bottom: 18px;}
+    @media (max-width:900px){.grid{grid-template-columns:1fr} header{grid-template-columns:auto 1fr}}
+    section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+    main > section:not(:first-child) { margin-top: 18px; } /* Added for spacing */
+    h2{margin:0 0 10px 0;font-size:1.1rem}
+    ul{margin:6px 0;padding-left:18px}
+    .pill{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:4px 10px;margin:4px 6px 0 0;background:#fff;font-size:.92rem}
+    [data-theme="dark"] .pill{background:#0f1420}
+    .meta{color:var(--muted);font-size:.92rem}
+    footer{margin-top:16px;color:var(--muted);font-size:.9rem}
+    .k{font-weight:600}
+    .sp{height:8px}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    @media (max-width:780px){.cards{grid-template-columns:1fr}}
+    .card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:12px}
+    .card h3{margin:0 0 6px 0;font-size:1rem}
+    .card .tags{margin-top:6px}
+    .badge{display:inline-block;border:1px solid var(--border);border-radius:8px;padding:3px 8px;margin-right:6px;font-size:.85rem}
+    .thumb{width:100%;height:auto;border-radius:10px;border:1px solid var(--border);margin-bottom:8px}
+    .toggle{cursor:pointer}
+  </style>
 </head>
 <body>
-  <body>
-  <div class="wrap">
-    <header>
-      <img class="avatar" src="img/profile.jpeg" alt="Profile photo of Beria Ayşenur Can" loading="eager" decoding="async">
-      <div>
-        <div class="brand">
-          <img class="logo" src="img/logo.svg" alt="Personal logo" loading="lazy" decoding="async">
-          <div class="name">Beria Ayşenur Can</div>
-        </div>
-        <div class="sub">M.Sc. Physics Engineering @ ITU · Particle & Computational Physics</div>
-      </div>
-      <div class="row">
-        <button id="theme" class="btn toggle" aria-label="Toggle theme">Toggle theme</button>
-        <a class="btn" href="CV.pdf" download>CV (PDF)</a>
-      </div>
+  <div class="wrap">
+    <header>
+      <img class="avatar" src="img/profile.jpeg" alt="Profile photo of Beria Ayşenur Can" loading="eager" decoding="async">
+      <div>
+        <div class="brand">
+          <img class="logo" src="img/logo.svg" alt="Personal logo" loading="lazy" decoding="async">
+          <div class="name">Beria Ayşenur Can</div>
+        </div>
+        <div class="sub">M.Sc. Physics Engineering @ ITU · Particle & Computational Physics</div>
+      </div>
+      <div class="row">
+        <button id="theme" class="btn toggle" aria-label="Toggle theme">Toggle theme</button>
+        <a class="btn" href="CV.pdf" download>CV (PDF)</a>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#profile">Profile</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#training">Training</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-      <nav aria-label="Primary">
-        <a href="#profile">Profile</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#training">Training</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <main>
+        <div class="grid">
+            <section id="profile">
+            <h2>Profile</h2>
+            <p class="small">Graduate student focusing on high-energy/particle physics and computational methods. Strong in <b>Python</b>, <b>ROOT/C++</b>, simulation and numerical modelling. B.Sc. thesis studied radon particle formation/measurement and deep-learning-based seismic correlations. Current aim: apply computational techniques to <b>CMS</b> analyses. Training: ML4FP 2025 (CERN, online); CMSDAS 2024 materials (self-study).</p>
+            <div class="sp"></div>
+            <h2>Highlights</h2>
+            <div>
+                <span class="pill">C++ · ROOT</span>
+                <span class="pill">Python · NumPy · Pandas</span>
+                <span class="pill">Scikit-learn · TensorFlow · PyTorch</span>
+                <span class="pill">Simulation (COMSOL, SimFlow)</span>
+                <span class="pill">MATLAB</span>
+                <span class="pill">Linux · Git</span>
+            </div>
+            </section>
+            <section>
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="https://github.com/beriaacan" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/beriaacan/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="CV.pdf" download>Download CV (PDF)</a></li>
+            </ul>
+            <h2>Downloads</h2>
+            <ul><li><a href="CV.pdf" download>CV (PDF)</a></li></ul>
+            </section>
+        </div>
 
-    <div class="grid">
-      <section id="profile">
-        <h2>Profile</h2>
-        <p class="small">Graduate student focusing on high-energy/particle physics and computational methods. Strong in <b>Python</b>, <b>ROOT/C++</b>, simulation and numerical modelling. B.Sc. thesis studied radon particle formation/measurement and deep-learning-based seismic correlations. Current aim: apply computational techniques to <b>CMS</b> analyses. Training: ML4FP 2025 (CERN, online); CMSDAS 2024 materials (self-study).</p>
-        <div class="sp"></div>
-        <h2>Highlights</h2>
-        <div>
-          <span class="pill">C++ · ROOT</span>
-          <span class="pill">Python · NumPy · Pandas</span>
-          <span class="pill">Scikit-learn · TensorFlow · PyTorch</span>
-          <span class="pill">Simulation (COMSOL, SimFlow)</span>
-          <span class="pill">MATLAB</span>
-          <span class="pill">Linux · Git</span>
-        </div>
-      </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="cards">
+            <article class="card">
+                <img class="thumb" src="img/project-radon.png" alt="Radon–Seismic ML project thumbnail" loading="lazy" decoding="async">
+                <h3>Radon–Seismic ML</h3>
+                <p>Deep learning–based analysis of radon particle measurements from multiple detectors to search for correlations with seismic events. Includes data preprocessing, anomaly detection, and statistical validation.</p>
+                <div class="tags">
+                <span class="badge">Python</span><span class="badge">TensorFlow</span><span class="badge">Scikit-learn</span><span class="badge">Prophet</span><span class="badge">Time-series</span>
+                </div>
+                <p><em>Private Repository</em></p>
+            </article>
+            <article class="card">
+                <img class="thumb" src="img/project-cmsdas.png" alt="CMSDAS exercises thumbnail" loading="lazy" decoding="async">
+                <h3><a href="https://github.com/beriaacan/cmsdas-2024-exercises" target="_blank" rel="noopener">CMSDAS 2024 Exercises</a></h3>
+                <p>Exercises and workflows from the CMS Data Analysis School, covering histogramming, fitting, event selection, and ROOT-based CMS analysis techniques.</p>
+                <div class="tags">
+                <span class="badge">ROOT</span><span class="badge">C++</span><span class="badge">Python</span>
+                </div>
+            </article>
+            <article class="card">
+                <img class="thumb" src="img/project-qm.png" alt="Quantum Mechanics solvers thumbnail" loading="lazy" decoding="async">
+                <h3><a href="https://github.com/beriaacan/qm-python-solvers" target="_blank" rel="noopener">QM Python Solvers</a></h3>
+                <p>Python-based solvers for quantum mechanics problems including eigenvalue calculations, shooting method, and finite-difference solutions for Schrödinger’s equation.</p>
+                <div class="tags">
+                <span class="badge">Python</span><span class="badge">Numerical Methods</span><span class="badge">Matplotlib</span>
+                </div>
+            </article>
+            <article class="card">
+                <img class="thumb" src="img/project-ml4fp.png" alt="ML4FP 2025 thumbnail" loading="lazy" decoding="async">
+                <h3><a href="https://github.com/beriaacan/ML4FP-2025" target="_blank" rel="noopener">Machine Learning for Fundamental Physics School (ML4FP) 2025</a></h3>
+                <p>Participated in CERN’s online school on modern machine learning techniques applied to fundamental physics, covering topics such as supervised/unsupervised learning, deep learning, and applications to particle physics datasets.</p>
+                <div class="tags">
+                <span class="badge">Machine Learning</span><span class="badge">Particle Physics</span><span class="badge">CERN</span>
+                </div>
+            </article>
+            <article class="card">
+                <img class="thumb" src="img/project-desalination.png" alt="Desalination simulation thumbnail" loading="lazy" decoding="async">
+                <h3>Seawater Desalination — CFD & COMSOL</h3>
+                <p>CFD and multiphysics simulations of seawater desalination processes. Includes flow regime analysis, parametric sweeps, and comparative performance modelling.</p>
+                <div class="tags">
+                <span class="badge">SimFlow</span><span class="badge">COMSOL</span><span class="badge">Numerical Modeling</span>
+                </div>
+                <p><em>Private Repository</em></p>
+            </article>
+            </div>
+        </section>
 
-      <section>
-        <h2>Quick Links</h2>
-        <ul>
-          <li><a href="https://github.com/beriaacan" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/beriaacan/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="CV.pdf" download>Download CV (PDF)</a></li>
-        </ul>
-        <h2>Downloads</h2>
-        <ul><li><a href="CV.pdf" download>CV (PDF)</a></li></ul>
-      </section>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+            <li><span class="k">Istanbul Technical University (ITU)</span> — <span class="k">M.Sc. Physics Engineering</span> (ongoing). Specialization: particle & computational physics. Thesis: integrate CMS data analysis with computational methods. <span class="meta">Istanbul, Türkiye · 2024–present</span></li>
+            <li><span class="k">Istanbul Technical University (ITU)</span> — <span class="k">B.Sc. Physics Engineering</span>, <b>3rd in department</b>. Thesis: radon formation/measurement; DL-based seismic correlation. <span class="meta">Istanbul, Türkiye · 2020–2024</span></li>
+            </ul>
+        </section>
 
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="cards">
-          <article class="card">
-            <img class="thumb" src="img/project-radon.png" alt="Radon–Seismic ML project thumbnail" loading="lazy" decoding="async">
-            <h3>Radon–Seismic ML</h3>
-            <p>Deep learning–based analysis of radon particle measurements from multiple detectors to search for correlations with seismic events. Includes data preprocessing, anomaly detection, and statistical validation.</p>
-            <div class="tags">
-              <span class="badge">Python</span><span class="badge">TensorFlow</span><span class="badge">Scikit-learn</span><span class="badge">Prophet</span><span class="badge">Time-series</span>
-            </div>
-            <p><em>Private Repository</em></p>
-          </article>
+        <section id="training">
+            <h2>Training & Schools</h2>
+            <ul>
+            <li>Machine Learning for Fundamental Physics School (ML4FP) 2025 — CERN (online)</li>
+            <li>CMSDAS 2024 — materials self-study</li>
+            </ul>
+        </section>
 
-          <article class="card">
-            <img class="thumb" src="img/project-cmsdas.png" alt="CMSDAS exercises thumbnail" loading="lazy" decoding="async">
-            <h3><a href="https://github.com/beriaacan/cmsdas-2024-exercises" target="_blank" rel="noopener">CMSDAS 2024 Exercises</a></h3>
-            <p>Exercises and workflows from the CMS Data Analysis School, covering histogramming, fitting, event selection, and ROOT-based CMS analysis techniques.</p>
-            <div class="tags">
-              <span class="badge">ROOT</span><span class="badge">C++</span><span class="badge">Python</span>
-            </div>
-          </article>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <ul>
+            <li><span class="k">Programming:</span> C++, Python (NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch), MATLAB, LaTeX</li>
+            <li><span class="k">Physics software:</span> ROOT, COMSOL, SimFlow</li>
+            <li><span class="k">Tools/OS:</span> Linux, Git</li>
+            <li><span class="k">Competencies:</span> Particle physics data analysis; simulation & modelling; ML for physics; statistical analysis</li>
+            </ul>
+        </section>
 
-          <article class="card">
-            <img class="thumb" src="img/project-qm.png" alt="Quantum Mechanics solvers thumbnail" loading="lazy" decoding="async">
-            <h3><a href="https://github.com/beriaacan/qm-python-solvers" target="_blank" rel="noopener">QM Python Solvers</a></h3>
-            <p>Python-based solvers for quantum mechanics problems including eigenvalue calculations, shooting method, and finite-difference solutions for Schrödinger’s equation.</p>
-            <div class="tags">
-              <span class="badge">Python</span><span class="badge">Numerical Methods</span><span class="badge">Matplotlib</span>
-            </div>
-          </article>
+        <section id="contact">
+            <h2>Contact</h2>
+            <ul>
+            <li>Email: <a href="mailto:canber20@itu.edu.tr">canber20@itu.edu.tr</a></li>
+            <li>Location: Istanbul, Türkiye</li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/beriaacan/" target="_blank" rel="noopener">beriaacan</a></li>
+            <li>GitHub: <a href="https://github.com/beriaacan" target="_blank" rel="noopener">beriaacan</a></li>
+            </ul>
+        </section>
+    </main>
 
-          <article class="card">
-            <img class="thumb" src="img/project-ml4fp.png" alt="ML4FP 2025 thumbnail" loading="lazy" decoding="async">
-            <h3><a href="https://github.com/beriaacan/ML4FP-2025" target="_blank" rel="noopener">Machine Learning for Fundamental Physics School (ML4FP) 2025</a></h3>
-            <p>Participated in CERN’s online school on modern machine learning techniques applied to fundamental physics, covering topics such as supervised/unsupervised learning, deep learning, and applications to particle physics datasets.</p>
-            <div class="tags">
-              <span class="badge">Machine Learning</span><span class="badge">Particle Physics</span><span class="badge">CERN</span>
-            </div>
-          </article>
+    <footer>Last updated: <span id="lu"></span> · © Beria Ayşenur Can</footer>
+  </div>
 
-          
-          <article class="card">
-            <img class="thumb" src="img/project-desalination.png" alt="Desalination simulation thumbnail" loading="lazy" decoding="async">
-            <h3>Seawater Desalination — CFD & COMSOL</h3>
-            <p>CFD and multiphysics simulations of seawater desalination processes. Includes flow regime analysis, parametric sweeps, and comparative performance modelling.</p>
-            <div class="tags">
-              <span class="badge">SimFlow</span><span class="badge">COMSOL</span><span class="badge">Numerical Modeling</span>
-            </div>
-            <p><em>Private Repository</em></p>
-          </article>
-        </div>
-      </section>
-
-      <section id="education">
-        <h2>Education</h2>
-        <ul>
-          <li><span class="k">Istanbul Technical University (ITU)</span> — <span class="k">M.Sc. Physics Engineering</span> (ongoing). Specialization: particle & computational physics. Thesis: integrate CMS data analysis with computational methods. <span class="meta">Istanbul, Türkiye · 2024–present</span></li>
-          <li><span class="k">Istanbul Technical University (ITU)</span> — <span class="k">B.Sc. Physics Engineering</span>, <b>3rd in department</b>. Thesis: radon formation/measurement; DL-based seismic correlation. <span class="meta">Istanbul, Türkiye · 2020–2024</span></li>
-        </ul>
-      </section>
-
-      <section id="training">
-        <h2>Training & Schools</h2>
-        <ul>
-          <li>Machine Learning for Fundamental Physics School (ML4FP) 2025 — CERN (online)</li>
-          <li>CMSDAS 2024 — materials self-study</li>
-        </ul>
-      </section>
-
-      <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul>
-          <li><span class="k">Programming:</span> C++, Python (NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch), MATLAB, LaTeX</li>
-          <li><span class="k">Physics software:</span> ROOT, COMSOL, SimFlow</li>
-          <li><span class="k">Tools/OS:</span> Linux, Git</li>
-          <li><span class="k">Competencies:</span> Particle physics data analysis; simulation & modelling; ML for physics; statistical analysis</li>
-        </ul>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <ul>
-          <li>Email: <a href="mailto:canber20@itu.edu.tr">canber20@itu.edu.tr</a></li>
-          <li>Location: Istanbul, Türkiye</li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/beriaacan/" target="_blank" rel="noopener">beriaacan</a></li>
-          <li>GitHub: <a href="https://github.com/beriaacan" target="_blank" rel="noopener">beriaacan</a></li>
-        </ul>
-      </section>
-    </div>
-
-    <footer>Last updated: <span id="lu"></span> · © Beria Ayşenur Can</footer>
-  </div>
-</body>
-
-  <script>
-    const d=new Date();
-    document.getElementById('lu').textContent=d.toLocaleDateString(undefined,{year:'numeric',month:'short'});
-    document.getElementById('theme').onclick=()=>{
-      const h=document.documentElement;
-      h.dataset.theme=(h.dataset.theme==="dark"?"light":"dark");
-      localStorage.setItem('theme',h.dataset.theme);
-    };
-    const saved=localStorage.getItem('theme'); if(saved){document.documentElement.dataset.theme=saved}
-  </script>
+  <script>
+    const d=new Date();
+    document.getElementById('lu').textContent=d.toLocaleDateString(undefined,{year:'numeric',month:'short'});
+    document.getElementById('theme').onclick=()=>{
+      const h=document.documentElement;
+      h.dataset.theme=(h.dataset.theme==="dark"?"light":"dark");
+      localStorage.setItem('theme',h.dataset.theme);
+    };
+    const saved=localStorage.getItem('theme'); if(saved){document.documentElement.dataset.theme=saved}
+  </script>
 </body>
 </html>
-
-
