@@ -62,28 +62,23 @@
     .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
     @media (max-width:900px){.grid{grid-template-columns:1fr} header{grid-template-columns:auto 1fr}}
     section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
-    h2{margin:0 0 10px 0;font-size:1.1rem; border-bottom: 1px solid var(--border); padding-bottom: 8px;}
+    h2{margin:0 0 10px 0;font-size:1.1rem}
     ul{margin:6px 0;padding-left:18px}
     .meta{color:var(--muted);font-size:.92rem}
     footer{margin-top:16px;color:var(--muted);font-size:.9rem;text-align:center;}
     .k{font-weight:600}
-    .sp{height:8px}
     .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
     @media (max-width:780px){.cards{grid-template-columns:1fr}}
-    .card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:12px; display:flex; flex-direction:column;}
+    .card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:12px; display:flex; flex-direction:column; transition: transform 0.2s ease-in-out;}
+    .card:hover { transform: translateY(-4px); }
+    .card a { text-decoration: none; color: inherit; }
     .card h3{margin:0 0 6px 0;font-size:1rem}
     .card .tags{margin-top:auto; padding-top: 8px;}
     .badge{display:inline-block;border:1px solid var(--border);border-radius:8px;padding:3px 8px;margin-right:6px;font-size:.85rem}
     .thumb{width:100%;height:auto;border-radius:10px;border:1px solid var(--border);margin-bottom:8px}
     .toggle{cursor:pointer}
     .private-note {font-size: .85rem; color: var(--muted); margin-top: 4px;}
-    /* New Skill Section Styles */
-    .skill-category { margin-bottom: 12px; }
-    .skill-category h3 { font-size: 1rem; margin: 0 0 8px 0; color: var(--muted); }
-    .skill-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
-    .skill-item { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 10px; }
-    .skill-item .name { font-weight: 600; }
-    .skill-item .level { font-size: 0.85rem; color: var(--muted); }
+    .pill{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:4px 12px;margin:4px 4px 0 0;background:var(--bg);font-size:.92rem}
   </style>
 </head>
 <body>
@@ -101,7 +96,6 @@
         <button id="theme" class="btn toggle" aria-label="Toggle light and dark theme">Toggle Theme</button>
         <a class="btn" href="CV.pdf" download>CV (PDF, 0.9 MB)</a>
       </div>
-
       <nav aria-label="Primary">
         <a href="#profile">Profile</a>
         <a href="#projects">Projects</a>
@@ -112,121 +106,97 @@
     </header>
 
     <div class="grid">
-      <section id="profile">
-        <h2>Profile</h2>
-        <p>Graduate student at Istanbul Technical University focused on high-energy particle physics and advanced computational methods. My core expertise lies in developing analysis workflows with <b>ROOT/C++</b> and applying machine learning models with <b>Python</b>. My B.Sc. thesis involved using deep learning for seismic-radon correlation analysis. I am currently seeking to apply these computational skills to a <b>CMS experiment</b> analysis.</p>
-      </section>
+      <main>
+        <section id="profile">
+          <h2>About Me</h2>
+          <p>I am a graduate student at Istanbul Technical University, deeply passionate about high-energy particle physics and the computational tools that drive discovery. My academic journey is focused on mastering analysis workflows in <b>ROOT/C++</b> and building predictive models with <b>Python</b> and its machine learning ecosystem. My goal is to contribute to meaningful physics analysis, particularly within the <b>CMS experiment</b>, by transforming complex data into clear, verifiable results.</p>
+        </section>
 
-      <section id="contact">
-        <h2>Contact & Links</h2>
-        <ul>
-          <li><a href="https://github.com/beriaacan" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/beriaacan/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li>Email: <a id="email-link" href="#">[Reveal Email]</a></li>
-          <li>Location: Istanbul, Türkiye</li>
-        </ul>
-      </section>
-      
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="cards">
-          <article class="card">
-            <img class="thumb" src="img/project-radon.png" alt="Graph showing radon soil concentration anomalies before a seismic event" loading="lazy" decoding="async" width="400" height="200">
-            <h3>Radon–Seismic ML Correlation</h3>
-            <p>Led a deep learning analysis of radon particle measurements to find correlations with seismic events. The project included data preprocessing, time-series anomaly detection (Prophet), and statistical validation.</p>
-            <div class="tags">
-              <span class="badge">Python</span><span class="badge">TensorFlow</span><span class="badge">Scikit-learn</span><span class="badge">Time-series</span>
-            </div>
-            <p class="private-note">Details and report summary available upon request.</p>
-          </article>
-
-          <article class="card">
-            <a href="https://github.com/beriaacan/cmsdas-2024-exercises" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
-              <img class="thumb" src="img/project-cmsdas.png" alt="A ROOT histogram showing a particle mass peak fit" loading="lazy" decoding="async" width="400" height="200">
-              <h3>CMSDAS 2024 Exercises</h3>
-              <p>Independently completed exercises from the CMS Data Analysis School, implementing workflows for histogramming, fitting, event selection, and other core ROOT-based analysis techniques.</p>
-              <div class="tags">
-                <span class="badge">ROOT</span><span class="badge">C++</span><span class="badge">Particle Physics</span>
-              </div>
-            </a>
-          </article>
-
-          <article class="card">
-            <a href="https://github.com/beriaacan/ML4FP-2025" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
-                <img class="thumb" src="img/project-ml4fp.png" alt="Diagram of a neural network architecture for physics" loading="lazy" decoding="async" width="400" height="200">
-                <h3>ML for Fundamental Physics (ML4FP) 2025</h3>
-                <p>Participated in CERN’s online school on modern ML techniques for physics, covering supervised/unsupervised learning, GNNs, and applications to particle physics data.</p>
+        <section id="projects">
+          <h2>Projects</h2>
+          <div class="cards">
+            <article class="card">
+              <a href="#/" class="card-link-wrapper" aria-label="View Radon–Seismic ML Correlation project details">
+                <img class="thumb" src="img/project-radon.png" alt="Graph showing radon soil concentration anomalies before a seismic event" loading="lazy" decoding="async" width="400" height="200">
+                <h3>Radon–Seismic ML Correlation</h3>
+                <p>A deep learning analysis of radon particle measurements to find correlations with seismic events. Included data preprocessing, time-series anomaly detection, and statistical validation.</p>
                 <div class="tags">
-                    <span class="badge">Machine Learning</span><span class="badge">PyTorch</span><span class="badge">CERN</span>
+                  <span class="badge">Python</span><span class="badge">TensorFlow</span><span class="badge">Time-series</span>
                 </div>
-            </a>
-          </article>
+              </a>
+              <p class="private-note">Details available upon request.</p>
+            </article>
 
-          <article class="card">
-            <a href="https://github.com/beriaacan/qm-python-solvers" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
-              <img class="thumb" src="img/project-qm.png" alt="Plot of a quantum wave function in a potential well" loading="lazy" decoding="async" width="400" height="200">
-              <h3>Quantum Mechanics Python Solvers</h3>
-              <p>Developed Python solvers for quantum mechanics problems, including eigenvalue calculations and finite-difference solutions for Schrödinger’s equation.</p>
-              <div class="tags">
-                <span class="badge">Python</span><span class="badge">Numerical Methods</span><span class="badge">Matplotlib</span>
-              </div>
-            </a>
-          </article>
-          
-          <article class="card">
-            <img class="thumb" src="img/project-desalination.png" alt="CFD simulation showing fluid dynamics in a seawater desalination chamber" loading="lazy" decoding="async" width="400" height="200">
-            <h3>Seawater Desalination — CFD & COMSOL</h3>
-            <p>CFD and multiphysics simulations of seawater desalination processes. Includes flow regime analysis, parametric sweeps, and comparative performance modelling.</p>
-            <div class="tags">
-              <span class="badge">SimFlow</span><span class="badge">COMSOL</span><span class="badge">Numerical Modeling</span>
+            <article class="card">
+              <a href="https://github.com/beriaacan/cmsdas-2024-exercises" target="_blank" rel="noopener" class="card-link-wrapper" aria-label="View CMSDAS 2024 Exercises on GitHub">
+                <img class="thumb" src="img/project-cmsdas.png" alt="A ROOT histogram showing a particle mass peak fit" loading="lazy" decoding="async" width="400" height="200">
+                <h3>CMSDAS 2024 Exercises</h3>
+                <p>Completed official exercises from the CMS Data Analysis School, covering histogramming, fitting, and core ROOT-based analysis techniques.</p>
+                <div class="tags">
+                  <span class="badge">ROOT</span><span class="badge">C++</span><span class="badge">Particle Physics</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="card">
+              <a href="https://github.com/beriaacan/ML4FP-2025" target="_blank" rel="noopener" class="card-link-wrapper" aria-label="View ML4FP 2025 project on GitHub">
+                  <img class="thumb" src="img/project-ml4fp.png" alt="Diagram of a neural network architecture for physics" loading="lazy" decoding="async" width="400" height="200">
+                  <h3>ML for Fundamental Physics 2025</h3>
+                  <p>Participated in CERN’s school on ML for physics, covering deep learning, GNNs, and applications to particle physics datasets.</p>
+                  <div class="tags">
+                      <span class="badge">Machine Learning</span><span class="badge">PyTorch</span><span class="badge">CERN</span>
+                  </div>
+              </a>
+            </article>
+
+            <article class="card">
+              <a href="#/" class="card-link-wrapper" aria-label="View Seawater Desalination simulation project details">
+                <img class="thumb" src="img/project-desalination.png" alt="CFD simulation showing fluid dynamics in a seawater desalination chamber" loading="lazy" decoding="async" width="400" height="200">
+                <h3>Seawater Desalination — CFD</h3>
+                <p>CFD and multiphysics simulations of seawater desalination processes, including flow regime analysis and performance modelling.</p>
+                <div class="tags">
+                  <span class="badge">SimFlow</span><span class="badge">COMSOL</span><span class="badge">Numerical Modeling</span>
+                </div>
+              </a>
+              <p class="private-note">Details available upon request.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <aside>
+        <section id="skills">
+            <h2>Technical Toolbox</h2>
+            <p style="font-size: .95rem; color: var(--muted);">My core skills are best demonstrated in my <a href="#projects">projects</a>.</p>
+            <div>
+              <span class="pill">C++ & ROOT</span>
+              <span class="pill">Python</span>
+              <span class="pill">NumPy & Pandas</span>
+              <span class="pill">Scikit-learn</span>
+              <span class="pill">TensorFlow & PyTorch</span>
+              <span class="pill">COMSOL & SimFlow</span>
+              <span class="pill">Linux & Git</span>
+              <span class="pill">Data Analysis</span>
             </div>
-            <p class="private-note">Details and report summary available upon request.</p>
-          </article>
+        </section>
 
-        </div>
-      </section>
-
-      <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skill-category">
-            <h3>Languages & Libraries</h3>
-            <div class="skill-grid">
-                <div class="skill-item"><span class="name">Python</span><div class="level">Advanced</div></div>
-                <div class="skill-item"><span class="name">C++</span><div class="level">Intermediate</div></div>
-                <div class="skill-item"><span class="name">NumPy / Pandas</span><div class="level">Advanced</div></div>
-                <div class="skill-item"><span class="name">Scikit-learn</span><div class="level">Advanced</div></div>
-                <div class="skill-item"><span class="name">TensorFlow / PyTorch</span><div class="level">Intermediate</div></div>
-                <div class="skill-item"><span class="name">MATLAB</span><div class="level">Intermediate</div></div>
-            </div>
-        </div>
-        <div class="skill-category">
-            <h3>Physics Software & Tools</h3>
-            <div class="skill-grid">
-                <div class="skill-item"><span class="name">ROOT</span><div class="level">Advanced</div></div>
-                <div class="skill-item"><span class="name">COMSOL</span><div class="level">Intermediate</div></div>
-                <div class="skill-item"><span class="name">SimFlow (OpenFOAM)</span><div class="level">Proficient</div></div>
-                <div class="skill-item"><span class="name">Git / GitHub</span><div class="level">Advanced</div></div>
-                <div class="skill-item"><span class="name">Linux / Bash</span><div class="level">Advanced</div></div>
-                <div class="skill-item"><span class="name">LaTeX</span><div class="level">Advanced</div></div>
-            </div>
-        </div>
-      </section>
-
-      <section id="education">
-        <h2>Education</h2>
-        <ul>
-          <li><span class="k">M.Sc. Physics Engineering</span> — Istanbul Technical University (ITU). <br><span class="meta">Specialization in Particle & Computational Physics. Thesis focuses on integrating computational methods with CMS data analysis. · 2024–Present</span></li>
-          <li><span class="k">B.Sc. Physics Engineering</span> — Istanbul Technical University (ITU). <br><span class="meta">Graduated <b>3rd in department</b>. Thesis on radon particle measurement and deep learning for seismic correlation. · 2020–2024</span></li>
-        </ul>
-      </section>
-
-      <section id="training">
-        <h2>Training & Schools</h2>
-        <ul>
-            <li>Machine Learning for Fundamental Physics School (ML4FP) 2025 — CERN (online participant)</li>
-            <li>CMS Data Analysis School (CMSDAS) 2024 — Self-Study <br><span class="meta">Completed official exercises independently using publicly available materials.</span></li>
-        </ul>
-      </section>
+        <section id="education">
+          <h2>Education</h2>
+          <ul>
+            <li><span class="k">M.Sc. Physics Engineering</span><br>Istanbul Technical University, 2024–Present</li>
+            <li><span class="k">B.Sc. Physics Engineering</span><br>Istanbul Technical University, 2020–2024</li>
+          </ul>
+        </section>
+        
+        <section id="contact">
+          <h2>Contact & Links</h2>
+          <ul>
+            <li><a href="https://github.com/beriaacan" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/beriaacan/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li>Email: <a id="email-link" href="#">[Reveal Email]</a></li>
+          </ul>
+        </section>
+      </aside>
     </div>
 
     <footer>Last updated: <span id="lu"></span> · © Beria Ayşenur Can</footer>
