@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,52 +8,83 @@
   <meta property="og:title" content="Beria Ayşenur Can — Physics" />
   <meta property="og:description" content="Particle & Computational Physics — ROOT, C++, Python, detector physics, simulation, ML4FP, CMSDAS." />
   <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.ico" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Beria Ayşenur Can",
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "Istanbul Technical University"},
+    "jobTitle": "Graduate Student",
+    "url": "https://beriaacan.github.io",
+    "sameAs": ["https://www.linkedin.com/in/beriaacan/","https://github.com/beriaacan"]
+  }
+  </script>
   <style>
     :root{ --fg:#0b0b0f;--muted:#5a5f6a;--bg:#ffffff;--acc:#1a73e8;--card:#f7f8fb;--border:#e6e8ef }
+    [data-theme="dark"]{ --fg:#e8eaf1;--muted:#a7afbd;--bg:#0b0f16;--acc:#77a8ff;--card:#121724;--border:#273046 }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
     a{color:var(--acc);text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:980px;margin:0 auto;padding:28px}
+    .wrap{max-width:1024px;margin:0 auto;padding:28px}
     header{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:14px}
     .name{font-size:1.7rem;font-weight:800}
     .sub{color:var(--muted)}
     .row{display:flex;gap:10px;flex-wrap:wrap}
     .btn{display:inline-block;border:1px solid var(--acc);color:var(--acc);padding:9px 12px;border-radius:10px;font-weight:600}
-    .btn:hover{background:#eef5ff}
+    .btn:hover{background:color-mix(in oklab, var(--acc) 10%, var(--bg))}
+    nav{display:flex;gap:12px;flex-wrap:wrap}
+    nav a{font-weight:600}
     .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
     @media (max-width:900px){.grid{grid-template-columns:1fr}}
     section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
     h2{margin:0 0 10px 0;font-size:1.1rem}
     ul{margin:6px 0;padding-left:18px}
     .pill{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:4px 10px;margin:4px 6px 0 0;background:#fff;font-size:.92rem}
+    [data-theme="dark"] .pill{background:#0f1420}
     .meta{color:var(--muted);font-size:.92rem}
     footer{margin-top:16px;color:var(--muted);font-size:.9rem}
     .k{font-weight:600}
     .sp{height:8px}
-    @media print{.btn{display:none}}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    @media (max-width:780px){.cards{grid-template-columns:1fr}}
+    .card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:12px}
+    .card h3{margin:0 0 6px 0;font-size:1rem}
+    .card .tags{margin-top:6px}
+    .badge{display:inline-block;border:1px solid var(--border);border-radius:8px;padding:3px 8px;margin-right:6px;font-size:.85rem}
+    .hero{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+    .hero nav{margin-left:auto}
+    .toggle{cursor:pointer}
+    code{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: .95em; background: color-mix(in oklab, var(--card) 80%, var(--bg)); padding: 2px 6px; border-radius: 6px}
+    img.thumb{width:100%;height:auto;border-radius:10px;border:1px solid var(--border)}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <header>
+    <header class="hero">
       <div>
         <div class="name">Beria Ayşenur Can</div>
         <div class="sub">M.Sc. Physics Engineering @ ITU · Particle & Computational Physics</div>
       </div>
+      <nav>
+        <a href="#profile">Profile</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#training">Training</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
       <div class="row">
-        <a class="btn" href="CV.pdf" download>Download CV (PDF)</a>
-        <a class="btn" href="mailto:canber20@itu.edu.tr">Email</a>
-        <a class="btn" href="https://www.linkedin.com/in/beriaacan/">LinkedIn</a>
-        <a class="btn" href="https://github.com/beriaacan">GitHub</a>
+        <button id="theme" class="btn toggle" aria-label="Toggle theme">Toggle theme</button>
+        <a class="btn" href="CV.pdf" download>CV (PDF)</a>
       </div>
     </header>
 
     <div class="grid">
-      <section>
+      <section id="profile">
         <h2>Profile</h2>
-        <p class="small">Graduate student focusing on high‑energy/particle physics and computational methods. Experience spans detector physics, ROOT‑based data analysis (C++/Python), numerical modelling, and simulation. B.Sc. thesis studied radon particle formation/measurement and deep‑learning‑based correlation with seismic activity. Current aim: apply computational techniques to CMS analyses. Training: ML4FP 2025 (CERN, online); CMSDAS 2024 materials (self‑study).</p>
-
+        <p class="small">Graduate student focusing on high‑energy/particle physics and computational methods. Strong in <b>Python</b>, <b>ROOT/C++</b>, simulation and numerical modelling. B.Sc. thesis studied radon particle formation/measurement and deep‑learning‑based seismic correlations. Current aim: apply computational techniques to <b>CMS</b> analyses. Training: ML4FP 2025 (CERN, online); CMSDAS 2024 materials (self‑study).</p>
         <div class="sp"></div>
         <h2>Highlights</h2>
         <div>
@@ -64,24 +95,60 @@
           <span class="pill">MATLAB</span>
           <span class="pill">Linux · Git</span>
         </div>
+      </section>
 
-        <div class="sp"></div>
+      <section>
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="https://github.com/beriaacan" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/beriaacan/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="CV.pdf" download>Download CV (PDF)</a></li>
+        </ul>
+        <h2>Downloads</h2>
+        <ul>
+          <li><a href="CV.pdf" download>CV (PDF)</a></li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Radon–Seismic Correlation (B.Sc. thesis)</h3>
+            <p>Time‑series analysis from 54 detectors; preprocessing, visualization; DL models for correlation search.</p>
+            <div class="tags"><span class="badge">Python</span><span class="badge">DL</span><span class="badge">Time‑series</span></div>
+            <p><a href="#">repo</a> · <a href="#">notes/pdf</a></p>
+          </article>
+          <article class="card">
+            <h3>CMSDAS 2024 — Self‑Study</h3>
+            <p>ROOT workflows: histogramming, fitting, basic selection chains; exploratory CMS analysis exercises.</p>
+            <div class="tags"><span class="badge">ROOT</span><span class="badge">C++</span><span class="badge">Python</span></div>
+            <p><a href="#">repo</a></p>
+          </article>
+          <article class="card">
+            <h3>Quantum Mechanics in Python</h3>
+            <p>Numerical solvers for standard QM problems; eigenvalue FD methods, shooting; visualization.</p>
+            <div class="tags"><span class="badge">Python</span><span class="badge">Numerical</span></div>
+            <p><a href="#">repo</a></p>
+          </article>
+          <article class="card">
+            <h3>Seawater Desalination — CFD & COMSOL</h3>
+            <p>SimFlow CFD modelling; COMSOL scripting for parametric sweeps; comparison of flow regimes.</p>
+            <div class="tags"><span class="badge">SimFlow</span><span class="badge">COMSOL</span></div>
+            <p><a href="#">summary</a></p>
+          </article>
+        </div>
+      </section>
+
+      <section id="education">
         <h2>Education</h2>
         <ul>
           <li><span class="k">Istanbul Technical University (ITU)</span> — <span class="k">M.Sc. Physics Engineering</span> (ongoing). Specialization: particle & computational physics. Thesis: integrate CMS data analysis with computational methods. <span class="meta">Istanbul, Türkiye · 2024–present</span></li>
           <li><span class="k">Istanbul Technical University (ITU)</span> — <span class="k">B.Sc. Physics Engineering</span>, <b>3rd in department</b>. Thesis: radon formation/measurement; DL‑based seismic correlation. <span class="meta">Istanbul, Türkiye · 2020–2024</span></li>
         </ul>
+      </section>
 
-        <div class="sp"></div>
-        <h2>Projects</h2>
-        <ul>
-          <li><span class="k">Radon–Seismic Correlation (B.Sc. thesis):</span> Data from 54 detectors; preprocessing, visualization; DL time‑series models. <a href="#">paper/notes</a></li>
-          <li><span class="k">CMSDAS 2024 (self‑study):</span> ROOT‑based workflows; histogramming, fitting, simple selection chains. <a href="#">repo</a></li>
-          <li><span class="k">QM in Python:</span> Numerical solvers for standard QM problems; eigenvalue shooting/FD methods. <a href="#">repo</a></li>
-          <li><span class="k">Seawater Desalination:</span> CFD modelling in SimFlow; COMSOL scripting for parametric sweeps. <a href="#">summary</a></li>
-        </ul>
-
-        <div class="sp"></div>
+      <section id="training">
         <h2>Training & Schools</h2>
         <ul>
           <li>Machine Learning for Fundamental Physics School (ML4FP) 2025 — CERN (online)</li>
@@ -89,13 +156,7 @@
         </ul>
       </section>
 
-      <section>
-        <h2>Experience</h2>
-        <ul>
-          <li><span class="k">TÜBİTAK 1001 — Radon & Seismic ML</span> — Research Student: end‑to‑end pipeline; statistical analysis; ML models.</li>
-          <li><span class="k">Data Engineer</span> — Large‑scale data handling; automated ETL in Python/SQL; skills transferable to HEP data workflows.</li>
-        </ul>
-
+      <section id="skills">
         <h2>Technical Skills</h2>
         <ul>
           <li><span class="k">Programming:</span> C++, Python (NumPy, Pandas, Scikit‑learn, TensorFlow, PyTorch), MATLAB, LaTeX</li>
@@ -103,10 +164,15 @@
           <li><span class="k">Tools/OS:</span> Linux, Git</li>
           <li><span class="k">Competencies:</span> Particle physics data analysis; simulation & modelling; ML for physics; statistical analysis</li>
         </ul>
+      </section>
 
-        <h2>Downloads</h2>
+      <section id="contact">
+        <h2>Contact</h2>
         <ul>
-          <li><a href="CV.pdf" download>CV (PDF)</a></li>
+          <li>Email: <a href="mailto:canber20@itu.edu.tr">canber20@itu.edu.tr</a></li>
+          <li>Location: Istanbul, Türkiye</li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/beriaacan/" target="_blank" rel="noopener">beriaacan</a></li>
+          <li>GitHub: <a href="https://github.com/beriaacan" target="_blank" rel="noopener">beriaacan</a></li>
         </ul>
       </section>
     </div>
@@ -117,6 +183,11 @@
   <script>
     const d=new Date();
     document.getElementById('lu').textContent = d.toLocaleDateString(undefined,{year:'numeric',month:'short'});
+    document.getElementById('theme').onclick=()=>{
+      const h=document.documentElement; h.dataset.theme = (h.dataset.theme==="dark"?"light":"dark");
+      localStorage.setItem('theme',h.dataset.theme);
+    };
+    const saved=localStorage.getItem('theme'); if(saved){document.documentElement.dataset.theme=saved}
   </script>
 </body>
 </html>
