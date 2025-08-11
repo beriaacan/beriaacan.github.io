@@ -4,40 +4,49 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Beria Ayşenur Can — Particle & Computational Physics</title>
-  <meta name="description" content="M.Sc. Physics Engineering (ITU). Particle & computational physics; ROOT/C++; Python; detector physics; simulation; ML for fundamental physics. CERN Technical Studentship profile." />
-  <meta property="og:title" content="Beria Ayşenur Can — Physics" />
-  <meta property="og:description" content="Particle & Computational Physics — ROOT, C++, Python, detector physics, simulation, ML4FP, CMSDAS." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="favicon.ico" />
+
+  <!-- Meta -->
+  <meta name="description" content="M.Sc. Physics Engineering (ITU). Particle & computational physics; ROOT/C++; Python; detector physics; simulation; ML for fundamental physics.">
+  <meta property="og:title" content="Beria Ayşenur Can — Physics">
+  <meta property="og:description" content="Particle & Computational Physics — ROOT, C++, Python, detector physics, simulation, ML4FP, CMSDAS.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/og-image.png">
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Beria Ayşenur Can",
-    "affiliation": {"@type": "CollegeOrUniversity", "name": "Istanbul Technical University"},
-    "jobTitle": "Graduate Student",
-    "url": "https://beriaacan.github.io",
-    "sameAs": ["https://www.linkedin.com/in/beriaacan/","https://github.com/beriaacan"]
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Beria Ayşenur Can",
+    "affiliation":{"@type":"CollegeOrUniversity","name":"Istanbul Technical University"},
+    "jobTitle":"Graduate Student",
+    "url":"https://beriaacan.github.io",
+    "sameAs":["https://www.linkedin.com/in/beriaacan/","https://github.com/beriaacan"]
   }
   </script>
+
+  <!-- Styles -->
   <style>
-    :root{ --fg:#0b0b0f;--muted:#5a5f6a;--bg:#ffffff;--acc:#1a73e8;--card:#f7f8fb;--border:#e6e8ef }
-    [data-theme="dark"]{ --fg:#e8eaf1;--muted:#a7afbd;--bg:#0b0f16;--acc:#77a8ff;--card:#121724;--border:#273046 }
+    :root{--fg:#0b0b0f;--muted:#5a5f6a;--bg:#fff;--acc:#1a73e8;--card:#f7f8fb;--border:#e6e8ef}
+    [data-theme="dark"]{--fg:#e8eaf1;--muted:#a7afbd;--bg:#0b0f16;--acc:#77a8ff;--card:#121724;--border:#273046}
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-    a{color:var(--acc);text-decoration:none}
-    a:hover{text-decoration:underline}
+    a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
     .wrap{max-width:1024px;margin:0 auto;padding:28px}
-    header{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:14px}
+    header{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;margin-bottom:14px}
+    .avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid var(--border)}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:32px;height:32px}
     .name{font-size:1.7rem;font-weight:800}
     .sub{color:var(--muted)}
-    .row{display:flex;gap:10px;flex-wrap:wrap}
+    .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
     .btn{display:inline-block;border:1px solid var(--acc);color:var(--acc);padding:9px 12px;border-radius:10px;font-weight:600}
     .btn:hover{background:color-mix(in oklab, var(--acc) 10%, var(--bg))}
-    nav{display:flex;gap:12px;flex-wrap:wrap}
+    nav{display:flex;gap:12px;flex-wrap:wrap;grid-column:1/-1}
     nav a{font-weight:600}
     .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    @media (max-width:900px){.grid{grid-template-columns:1fr} header{grid-template-columns:auto 1fr}}
     section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
     h2{margin:0 0 10px 0;font-size:1.1rem}
     ul{margin:6px 0;padding-left:18px}
@@ -53,21 +62,27 @@
     .card h3{margin:0 0 6px 0;font-size:1rem}
     .card .tags{margin-top:6px}
     .badge{display:inline-block;border:1px solid var(--border);border-radius:8px;padding:3px 8px;margin-right:6px;font-size:.85rem}
-    .hero{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-    .hero nav{margin-left:auto}
+    .thumb{width:100%;height:auto;border-radius:10px;border:1px solid var(--border);margin-bottom:8px}
     .toggle{cursor:pointer}
-    code{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: .95em; background: color-mix(in oklab, var(--card) 80%, var(--bg)); padding: 2px 6px; border-radius: 6px}
-    img.thumb{width:100%;height:auto;border-radius:10px;border:1px solid var(--border)}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <header class="hero">
+    <header>
+      <img class="avatar" src="img/profile.jpg" alt="Profile photo of Beria Ayşenur Can" loading="eager" decoding="async">
       <div>
-        <div class="name">Beria Ayşenur Can</div>
+        <div class="brand">
+          <img class="logo" src="img/logo.svg" alt="Personal logo" loading="lazy" decoding="async">
+          <div class="name">Beria Ayşenur Can</div>
+        </div>
         <div class="sub">M.Sc. Physics Engineering @ ITU · Particle & Computational Physics</div>
       </div>
-      <nav>
+      <div class="row">
+        <button id="theme" class="btn toggle" aria-label="Toggle theme">Toggle theme</button>
+        <a class="btn" href="CV.pdf" download>CV (PDF)</a>
+      </div>
+
+      <nav aria-label="Primary">
         <a href="#profile">Profile</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
@@ -75,10 +90,6 @@
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
-      <div class="row">
-        <button id="theme" class="btn toggle" aria-label="Dark Mode">Toggle theme</button>
-        <a class="btn" href="CV.pdf" download>CV (PDF)</a>
-      </div>
     </header>
 
     <div class="grid">
@@ -105,54 +116,46 @@
           <li><a href="CV.pdf" download>Download CV (PDF)</a></li>
         </ul>
         <h2>Downloads</h2>
-        <ul>
-          <li><a href="CV.pdf" download>CV (PDF)</a></li>
-        </ul>
+        <ul><li><a href="CV.pdf" download>CV (PDF)</a></li></ul>
       </section>
 
       <section id="projects">
         <h2>Projects</h2>
         <div class="cards">
           <article class="card">
+            <img class="thumb" src="img/project-radon.png" alt="Radon–Seismic ML project thumbnail" loading="lazy" decoding="async">
             <h3>Radon–Seismic ML</h3>
             <p>Deep learning–based analysis of radon particle measurements from multiple detectors to search for correlations with seismic events. Includes data preprocessing, anomaly detection, and statistical validation.</p>
             <div class="tags">
-              <span class="badge">Python</span>
-              <span class="badge">TensorFlow</span>
-              <span class="badge">Scikit-learn</span>
-              <span class="badge">ROOT</span>
-              <span class="badge">Time-series</span>
+              <span class="badge">Python</span><span class="badge">TensorFlow</span><span class="badge">Scikit-learn</span><span class="badge">ROOT</span><span class="badge">Time-series</span>
             </div>
             <p><em>Private Repository</em></p>
           </article>
 
           <article class="card">
-            <h3><a href="https://github.com/beriaacan/cmsdas-2024-exercises" target="_blank">CMSDAS 2024 Exercises</a></h3>
+            <img class="thumb" src="img/project-cmsdas.png" alt="CMSDAS exercises thumbnail" loading="lazy" decoding="async">
+            <h3><a href="https://github.com/beriaacan/cmsdas-2024-exercises" target="_blank" rel="noopener">CMSDAS 2024 Exercises</a></h3>
             <p>Exercises and workflows from the CMS Data Analysis School, covering histogramming, fitting, event selection, and ROOT-based CMS analysis techniques.</p>
             <div class="tags">
-              <span class="badge">ROOT</span>
-              <span class="badge">C++</span>
-              <span class="badge">Python</span>
+              <span class="badge">ROOT</span><span class="badge">C++</span><span class="badge">Python</span>
             </div>
           </article>
 
           <article class="card">
-            <h3><a href="https://github.com/beriaacan/qm-python-solvers" target="_blank">QM Python Solvers</a></h3>
+            <img class="thumb" src="img/project-qm.png" alt="Quantum Mechanics solvers thumbnail" loading="lazy" decoding="async">
+            <h3><a href="https://github.com/beriaacan/qm-python-solvers" target="_blank" rel="noopener">QM Python Solvers</a></h3>
             <p>Python-based solvers for quantum mechanics problems including eigenvalue calculations, shooting method, and finite-difference solutions for Schrödinger’s equation.</p>
             <div class="tags">
-              <span class="badge">Python</span>
-              <span class="badge">Numerical Methods</span>
-              <span class="badge">Matplotlib</span>
+              <span class="badge">Python</span><span class="badge">Numerical Methods</span><span class="badge">Matplotlib</span>
             </div>
           </article>
 
           <article class="card">
+            <img class="thumb" src="img/project-desalination.png" alt="Desalination simulation thumbnail" loading="lazy" decoding="async">
             <h3>Seawater Desalination — CFD & COMSOL</h3>
             <p>CFD and multiphysics simulations of seawater desalination processes. Includes flow regime analysis, parametric sweeps, and comparative performance modelling.</p>
             <div class="tags">
-              <span class="badge">SimFlow</span>
-              <span class="badge">COMSOL</span>
-              <span class="badge">Numerical Modeling</span>
+              <span class="badge">SimFlow</span><span class="badge">COMSOL</span><span class="badge">Numerical Modeling</span>
             </div>
             <p><em>Private Repository</em></p>
           </article>
@@ -199,11 +202,13 @@
     <footer>Last updated: <span id="lu"></span> · © Beria Ayşenur Can</footer>
   </div>
 
+  <!-- Scripts -->
   <script>
     const d=new Date();
-    document.getElementById('lu').textContent = d.toLocaleDateString(undefined,{year:'numeric',month:'short'});
+    document.getElementById('lu').textContent=d.toLocaleDateString(undefined,{year:'numeric',month:'short'});
     document.getElementById('theme').onclick=()=>{
-      const h=document.documentElement; h.dataset.theme = (h.dataset.theme==="dark"?"light":"dark");
+      const h=document.documentElement;
+      h.dataset.theme=(h.dataset.theme==="dark"?"light":"dark");
       localStorage.setItem('theme',h.dataset.theme);
     };
     const saved=localStorage.getItem('theme'); if(saved){document.documentElement.dataset.theme=saved}
