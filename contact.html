@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.body.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
     <header>
         <a href="index.html" class="brand">
             <img class="brand-avatar" src="img/profile.jpeg" alt="Avatar">
@@ -75,7 +84,7 @@
                     <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=RNKHH8eb7VamzE00GeIgj2PjusqfjYjv-x3evCB4jgA&cl=ffffff&w=a"></script>
                 </div>
             </section>
-            </main>
+        </main>
     </div>
     
     <footer style="text-align: center; margin-top: 4rem; margin-bottom: 2rem; color: #888; font-size: 0.8rem;">
