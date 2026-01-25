@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,28 +7,32 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="wrap">
-        <header>
-            <div class="header-top">
-                <img class="avatar" src="img/profile.jpeg" alt="Beria Ayşenur Can">
-                <div>
-                    <h1 class="name">Beria Ayşenur Can</h1>
-                    <div class="sub">M.Sc. Physics Engineering @ ITU · Data Engineer</div>
-                </div>
-            </div>
-            <nav>
-                <a href="index.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="education.html">Education</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
+    <header>
+        <a href="index.html" class="brand">
+            <img class="brand-avatar" src="img/profile.jpeg" alt="Avatar">
+            <span class="brand-name">Beria Ayşenur Can</span>
+        </a>
+        <nav>
+            <a href="index.html" class="active">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html">Contact</a>
+            <button id="theme-toggle" class="theme-btn">☾ Dark</button>
+        </nav>
+    </header>
 
+    <div class="wrap">
         <main>
+            <section class="hero">
+                <img class="hero-avatar" src="img/profile.jpeg" alt="Beria Ayşenur Can">
+                <h1>Beria Ayşenur Can</h1>
+                <div class="hero-sub">M.Sc. Physics Engineering @ ITU · CERN Data Engineer</div>
+            </section>
+
             <section>
                 <h2>About Me</h2>
-                <p>I am a physicist and data engineer focused on high-energy particle physics and computational modeling. As an active  member of the CMS experiment at CERN, I apply machine learning and large-scale data processing techniques to fundamental physics research.</p>
-                <p>My work bridges the gap between theoretical physics simulations and robust data engineering pipelines.</p>
+                <p>I am a physicist and data engineer focused on high-energy particle physics and computational modeling. As an active member of the CMS experiment at CERN, I apply machine learning and large-scale data processing techniques to fundamental physics research.</p>
+                <p>My work bridges the gap between theoretical physics simulations and robust data engineering pipelines, ensuring efficient analysis of petabyte-scale datasets.</p>
             </section>
         </main>
     </div>

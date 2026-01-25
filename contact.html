@@ -1,38 +1,31 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact | Beria Ayşenur Can</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .contact-list { list-style: none; padding: 0; }
-        .contact-list li { margin-bottom: 15px; font-size: 1.1rem; }
-        .cv-container { margin-top: 30px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; height: 600px; }
-        .cv-container iframe { width: 100%; height: 100%; border: none; }
-        .download-btn { 
-            display: inline-block; background: var(--acc); color: #fff; 
-            padding: 12px 24px; border-radius: 8px; text-decoration: none; 
-            font-weight: bold; margin-bottom: 20px; transition: 0.3s;
-        }
-        .download-btn:hover { opacity: 0.9; transform: translateY(-2px); }
-    </style>
 </head>
 <body>
-    <div class="wrap">
-        <header>
-            <h1 class="name">Contact & CV</h1>
-            <nav>
-                <a href="index.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="education.html">Education</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
+    <header>
+        <a href="index.html" class="brand">
+            <img class="brand-avatar" src="img/profile.jpeg" alt="Avatar">
+            <span class="brand-name">Beria Ayşenur Can</span>
+        </a>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html" class="active">Contact</a>
+            <button id="theme-toggle" class="theme-btn">☾ Dark</button>
+        </nav>
+    </header>
 
+    <div class="wrap">
         <main>
             <section>
                 <h2>Get in Touch</h2>
-                <ul class="contact-list">
+                <ul class="info-list">
                     <li><strong>Email:</strong> <a href="mailto:canber20@itu.edu.tr">canber20@itu.edu.tr</a></li>
                     <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/beriaacan/" target="_blank">linkedin.com/in/beriaacan</a></li>
                     <li><strong>GitHub:</strong> <a href="https://github.com/beriaacan" target="_blank">github.com/beriaacan</a></li>
@@ -42,11 +35,10 @@
 
             <section>
                 <h2>Curriculum Vitae</h2>
-                <a href="CV.pdf" download class="download-btn">Download CV (PDF)</a>
+                <p>You can view my CV below or download it for offline viewing.</p>
+                <a href="CV.pdf" download class="btn-primary">Download CV (PDF)</a>
                 
-                <div class="cv-container">
-                    <iframe src="CV.pdf#toolbar=0" title="Beria Ayşenur Can CV"></iframe>
-                </div>
+                <iframe class="cv-frame" src="CV.pdf#toolbar=0" title="Beria Ayşenur Can CV"></iframe>
             </section>
         </main>
     </div>

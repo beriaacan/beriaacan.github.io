@@ -1,27 +1,45 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projects | Beria Ayşenur Can</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header>
+        <a href="index.html" class="brand">
+            <img class="brand-avatar" src="img/profile.jpeg" alt="Avatar">
+            <span class="brand-name">Beria Ayşenur Can</span>
+        </a>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html">Contact</a>
+            <button id="theme-toggle" class="theme-btn">☾ Dark</button>
+        </nav>
+    </header>
+
     <div class="wrap">
         <main>
             <h2>Research & Engineering Projects</h2>
-            <div class="cards">
+            <div class="grid-cards">
                 <article class="card">
-                    [cite_start]<h3>Radon–Seismic ML [cite: 1]</h3>
-                    [cite_start]<p>Deep learning analysis of radon particle measurements for seismic correlations[cite: 1].</p>
+                    <h3>Radon–Seismic ML</h3>
+                    <p>Deep learning analysis of radon particle measurements for seismic correlations. Utilizes time-series forecasting to predict anomalies.</p>
                     <span class="badge">TensorFlow</span>
+                    <span class="badge">Python</span>
                 </article>
                 <article class="card">
-                    [cite_start]<h3>CMSDAS 2024 [cite: 1]</h3>
-                    [cite_start]<p>ROOT-based CMS analysis workflows and event selection exercises[cite: 1].</p>
+                    <h3>CMSDAS 2024 Analysis</h3>
+                    <p>ROOT-based CMS analysis workflows and event selection exercises. Optimized C++ pipelines for high-energy physics data.</p>
                     <span class="badge">ROOT/C++</span>
+                    <span class="badge">CERN</span>
                 </article>
             </div>
         </main>
     </div>
+    <script src="js/theme.js"></script>
 </body>
 </html>

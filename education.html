@@ -1,37 +1,53 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Education | Beria Ayşenur Can</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="wrap">
-        <header>
-            <h1 class="name">Education & Training</h1>
-            <nav>
-                <a href="index.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="education.html">Education</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
+    <header>
+        <a href="index.html" class="brand">
+            <img class="brand-avatar" src="img/profile.jpeg" alt="Avatar">
+            <span class="brand-name">Beria Ayşenur Can</span>
+        </a>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="education.html" class="active">Education</a>
+            <a href="contact.html">Contact</a>
+            <button id="theme-toggle" class="theme-btn">☾ Dark</button>
+        </nav>
+    </header>
 
+    <div class="wrap">
         <main>
             <section>
                 <h2>Academic Journey</h2>
-                <ul>
-                    <li><strong>M.Sc. Physics Engineering</strong>, Istanbul Technical University (Ongoing)</li>
-                    <li><strong>B.Sc. Physics Engineering</strong>, ITU (3rd in Department) </li>
+                <ul class="info-list">
+                    <li>
+                        <strong>2024 - Now</strong>
+                        <span>M.Sc. Physics Engineering, Istanbul Technical University</span>
+                    </li>
+                    <li>
+                        <strong>2020 - 2024</strong>
+                        <span>B.Sc. Physics Engineering, ITU (Ranked 3rd in Department)</span>
+                    </li>
                 </ul>
             </section>
+            
             <section>
                 <h2>Professional Training</h2>
-                <ul>
-                    <li>ML4FP 2025 - Machine Learning for Fundamental Physics (CERN) </li>
+                <ul class="info-list">
+                    <li>
+                        <strong>2025</strong>
+                        <span>ML4FP - Machine Learning for Fundamental Physics (CERN)</span>
+                    </li>
                 </ul>
             </section>
         </main>
     </div>
+    <script src="js/theme.js"></script>
 </body>
 </html>
