@@ -125,7 +125,7 @@ h2::after {
 h3 { font-size: 1.3rem; margin-bottom: 0.75rem; font-weight: 700; }
 p { margin-bottom: 1.2rem; color: var(--muted); font-size: 1.05rem; }
 
-/* === DÜZELTİLMİŞ HERO BÖLÜMÜ (Bunu kopyalayın) === */
+/* === DÜZELTİLMİŞ HERO BÖLÜMÜ === */
 .hero-section {
     background: var(--hero-bg);
     border-bottom: 1px solid var(--border);
@@ -209,7 +209,7 @@ p { margin-bottom: 1.2rem; color: var(--muted); font-size: 1.05rem; }
 
 
 
-/* Cards (Projects) - Daha Dokunsal */
+/* Cards (Projects) - Kartların tamamı tıklanabilir yapıldı */
 .grid-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Kartlar biraz daha geniş */
@@ -223,16 +223,37 @@ p { margin-bottom: 1.2rem; color: var(--muted); font-size: 1.05rem; }
     padding: 30px;
     transition: all 0.3s ease;
     box-shadow: var(--shadow-sm);
+    position: relative; /* Linkin ::after elementi için referans noktası */
 }
 .card:hover {
     transform: translateY(-5px); /* Yukarı doğru daha belirgin hareket */
     box-shadow: var(--shadow-md);
     border-color: var(--acc);
+    cursor: pointer; /* İmleci el ikonuna çevirir */
 }
+
+/* Link ayarları ve genişletilmiş tıklanma alanı */
+.card h3 a {
+    text-decoration: none;
+    color: inherit;
+}
+.card h3 a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1; /* Diğer elemanları engellememesi için */
+}
+
+/* Badge'lerin tıklanabilirliği engellememesi için z-index ayarı */
 .badge {
     display: inline-block; background: var(--hero-bg); border: 1px solid var(--border);
     padding: 6px 12px; border-radius: 30px; font-size: 0.8rem;
     font-weight: 700; color: var(--acc); margin-top: 12px; margin-right: 5px;
+    position: relative;
+    z-index: 2; 
 }
 
 /* Lists & Buttons - Daha Cilalı */
