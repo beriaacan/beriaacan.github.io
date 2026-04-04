@@ -238,3 +238,73 @@ p { margin-bottom: 1.2rem; color: var(--muted); font-size: 1.05rem; }
     position: relative;
     z-index: 2;
 }
+
+/* Hero Section (About Sayfası Üst Kısım) */
+.hero-section {
+    background: var(--hero-bg);
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 60px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1 1 400px;
+}
+
+.hero-sub {
+    font-size: 1.2rem;
+    color: var(--acc);
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.hero-intro {
+    font-size: 1.1rem;
+    max-width: 600px;
+    color: var(--muted);
+}
+
+.hero-image-container {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-avatar-rect {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 4/5;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    border: 4px solid var(--card-bg);
+    transition: transform 0.3s ease;
+}
+
+.hero-avatar-rect:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 900px) {
+    .hero-content {
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .hero-intro { margin: 0 auto; }
+    .hero-image-container { width: 100%; margin-top: 20px; }
+    .hero-avatar-rect { max-width: 240px; }
+}
