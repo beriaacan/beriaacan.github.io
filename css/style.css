@@ -183,3 +183,58 @@ p { margin-bottom: 1.2rem; color: var(--muted); font-size: 1.05rem; }
     header { height: auto; flex-direction: column; padding: 15px; gap: 15px; }
     nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
 }
+
+/* Projects Grid & Cards */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--acc);
+    cursor: pointer;
+}
+
+.card h3 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card h3 a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--hero-bg);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--acc);
+    margin-top: 12px;
+    margin-right: 5px;
+    position: relative;
+    z-index: 2;
+}
