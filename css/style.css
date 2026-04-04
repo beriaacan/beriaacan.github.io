@@ -301,3 +301,50 @@ p { margin-bottom: 1.2rem; color: var(--muted); font-size: 1.05rem; }
     header { height: auto; flex-direction: column; padding: 15px; gap: 15px; }
     nav { flex-wrap: wrap; justify-content: center; }
 }
+/* Contact Grid Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+    .contact-form-container {
+        margin-top: 0 !important;
+    }
+}
+
+/* Social Links Buttons */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 30px; 
+    color: var(--fg);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.social-btn:hover {
+    border-color: var(--acc);
+    color: var(--acc);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
