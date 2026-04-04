@@ -88,8 +88,16 @@
 
             <section>
                 <h2>CV</h2>
-                <p>You can download my CV via the button below.</p>
-                <a href="CV.pdf" download class="btn-primary">Download CV (PDF)</a>
+                <p>You can view my CV below, or download it for later.</p>
+                
+                <iframe src="CV.pdf" class="cv-frame" title="Beria Can CV">
+                    <p>Tarayıcınız PDF görüntülemeyi desteklemiyor.</p>
+                </iframe>
+
+                <div style="margin-top: 1.5rem; display: flex; gap: 10px; align-items: center;">
+                    <a href="CV.pdf" download class="btn-primary">Download CV (PDF)</a>
+                    <a href="CV.pdf" target="_blank" rel="noopener noreferrer" class="social-btn">Open in New Tab</a>
+                </div>
             </section>
         </main>
     </div>
