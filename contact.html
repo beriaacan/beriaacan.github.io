@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Contact | Beria Can</title>
-    <meta name="description" content="Particle Physicist & Data Engineer at CERN. Get in touch for research or engineering collaborations.">
+    <meta name="description" content="Contact Beria Can — Master’s student at ITU, CMS Collaboration at CERN.">
     <meta property="og:title" content="Contact | Beria Can">
-    <meta property="og:description" content="M.Sc. Physics Engineering @ ITU · CERN. Let's connect.">
+    <meta property="og:description" content="M.Sc. Physics Engineering @ ITU · CMS / CERN.">
     <meta property="og:image" content="img/profile.jpeg">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
@@ -43,21 +43,21 @@
 
     <div class="wrap">
         <main>
-            <h1>Get in Touch</h1>
-            <p>Feel free to drop me a message below!</p>
+            <h1>Contact</h1>
+            <p>For research or collaboration questions, email is best.</p>
 
             <section class="contact-grid">
                 <div class="contact-info">
                     <ul class="info-list">
-                        <li><strong>Email:</strong> <a href="mailto:beria.aysenur.can@cern.ch">beria.aysenur.can@cern.ch</a></li>
-                        <li><strong>Location:</strong> Geneva, Switzerland (CERN)</li>
+                        <li><strong>Email</strong> <a href="mailto:beria.aysenur.can@cern.ch">beria.aysenur.can@cern.ch</a></li>
+                        <li><strong>Affiliation</strong> <span>ITU · CMS / CERN</span></li>
+                        <li><strong>Location</strong> <span>Geneva, Switzerland</span></li>
                     </ul>
 
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.1rem;">Profiles</h3>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.1rem;">Elsewhere</h3>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/beriaacan/" target="_blank" rel="noopener noreferrer" class="social-btn">LinkedIn</a>
                         <a href="https://github.com/beriaacan" target="_blank" rel="noopener noreferrer" class="social-btn">GitHub</a>
-                        <a href="https://x.com/beriaacan" target="_blank" rel="noopener noreferrer" class="social-btn">X</a>
+                        <a href="https://www.linkedin.com/in/beriaacan/" target="_blank" rel="noopener noreferrer" class="social-btn">LinkedIn</a>
                     </div>
                 </div>
 
@@ -78,7 +78,7 @@
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
 
-                        <button type="submit" id="form-submit-btn" class="btn-primary form-submit">Send Message</button>
+                        <button type="submit" id="form-submit-btn" class="btn-primary form-submit">Send</button>
                         <div id="form-status" class="form-message"></div>
                     </form>
                 </div>
@@ -110,22 +110,22 @@
                 });
 
                 if (response.ok) {
-                    status.innerHTML = "Thanks for your message! I'll get back to you soon.";
+                    status.innerHTML = "Thanks — I’ll get back to you by email.";
                     status.className = "form-message success";
                     form.reset();
-                    btn.innerText = "Message Sent";
+                    btn.innerText = "Sent";
                 } else {
                     const result = await response.json();
-                    status.innerHTML = result.errors ? result.errors.map(error => error.message).join(", ") : "Oops! Something went wrong.";
+                    status.innerHTML = result.errors ? result.errors.map(error => error.message).join(", ") : "Something went wrong. Please email me directly.";
                     status.className = "form-message error";
                     btn.disabled = false;
-                    btn.innerText = "Send Message";
+                    btn.innerText = "Send";
                 }
             } catch (error) {
-                status.innerHTML = "Oops! Network error, please try again.";
+                status.innerHTML = "Network error. Please email me directly.";
                 status.className = "form-message error";
                 btn.disabled = false;
-                btn.innerText = "Send Message";
+                btn.innerText = "Send";
             }
         }
         form.addEventListener("submit", handleSubmit);
