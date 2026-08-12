@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Publications | Beria Can</title>
+    <meta name="description" content="Publications and scholarly output by Beria Can.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.body.classList.add('dark-mode');
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <header>
+        <a href="index.html" class="brand">
+            <img class="brand-avatar" src="img/profile.jpeg" alt="Avatar">
+            <span class="brand-name">Beria Can</span>
+        </a>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html" class="active">Publications</a>
+            <a href="notes.html">Notes</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">Contact</a>
+            <button id="theme-toggle" class="theme-btn">☾ Dark Mode</button>
+        </nav>
+    </header>
+
+    <div class="wrap">
+        <main>
+            <h1>Publications</h1>
+            <p>Papers, proceedings, and other scholarly output will be listed here as they appear.</p>
+
+            <section class="empty-state">
+                <p>No publications listed yet. Check back soon — or reach out if you’d like a preprint or draft.</p>
+            </section>
+
+            <!-- Example entry (uncomment and edit when ready):
+            <ul class="pub-list">
+                <li>
+                    <span class="pub-year">2026</span>
+                    <div class="pub-body">
+                        <strong>Paper title here</strong>
+                        <span class="pub-meta">Authors · Journal / Conference</span>
+                        <span class="pub-links">
+                            <a href="#">arXiv</a> · <a href="#">PDF</a>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            -->
+        </main>
+        <footer style="text-align: center; margin-top: 4rem; margin-bottom: 2rem; color: var(--muted); font-size: 0.8rem;">
+        </footer>
+    </div>
+    <script src="js/theme.js"></script>
+</body>
+</html>

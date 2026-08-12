@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <title>Contact | Beria Can</title>
     <meta name="description" content="Particle Physicist & Data Engineer at CERN. Get in touch for research or engineering collaborations.">
     <meta property="og:title" content="Contact | Beria Can">
@@ -32,8 +32,10 @@
         </a>
         <nav>
             <a href="index.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="education.html">Education</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="notes.html">Notes</a>
+            <a href="cv.html">CV</a>
             <a href="contact.html" class="active">Contact</a>
             <button id="theme-toggle" class="theme-btn">☾ Dark Mode</button>
         </nav>
@@ -65,7 +67,7 @@
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" required>
@@ -81,21 +83,9 @@
                     </form>
                 </div>
             </section>
-
-            <hr style="margin: 3rem 0; border: 0; border-top: 1px solid var(--border);">
-
-            <section>
-                <h2>CV</h2>
-                <p>You can download my CV or open it in a new tab.</p>
-
-                <div style="margin-top: 1.5rem; display: flex; gap: 10px; align-items: center;">
-                    <a href="CV.pdf" download class="btn-primary">Download CV (PDF)</a>
-                    <a href="CV.pdf" target="_blank" rel="noopener noreferrer" class="social-btn">Open in New Tab</a>
-                </div>
-            </section>
         </main>
     </div>
-    
+
     <footer style="text-align: center; margin-top: 4rem; margin-bottom: 2rem; color: var(--muted); font-size: 0.8rem;">
     </footer>
 
@@ -109,9 +99,9 @@
             event.preventDefault();
             btn.disabled = true;
             btn.innerText = "Sending...";
-            
+
             const data = new FormData(event.target);
-            
+
             try {
                 const response = await fetch(event.target.action, {
                     method: form.method,

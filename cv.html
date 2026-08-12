@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CV | Beria Can</title>
+    <meta name="description" content="Curriculum vitae of Beria Can — particle physicist and data engineer.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.body.classList.add('dark-mode');
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <header>
+        <a href="index.html" class="brand">
+            <img class="brand-avatar" src="img/profile.jpeg" alt="Avatar">
+            <span class="brand-name">Beria Can</span>
+        </a>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="notes.html">Notes</a>
+            <a href="cv.html" class="active">CV</a>
+            <a href="contact.html">Contact</a>
+            <button id="theme-toggle" class="theme-btn">☾ Dark Mode</button>
+        </nav>
+    </header>
+
+    <div class="wrap">
+        <main>
+            <h1>CV</h1>
+            <p>Download my curriculum vitae or open it in a new tab.</p>
+
+            <div class="cv-actions">
+                <a href="CV.pdf" download class="btn-primary">Download CV (PDF)</a>
+                <a href="CV.pdf" target="_blank" rel="noopener noreferrer" class="social-btn">Open in New Tab</a>
+            </div>
+        </main>
+        <footer style="text-align: center; margin-top: 4rem; margin-bottom: 2rem; color: var(--muted); font-size: 0.8rem;">
+        </footer>
+    </div>
+    <script src="js/theme.js"></script>
+</body>
+</html>

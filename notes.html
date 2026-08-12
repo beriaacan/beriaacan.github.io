@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notes | Beria Can</title>
+    <meta name="description" content="Short reference notes on physics, mathematics, and related topics.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.body.classList.add('dark-mode');
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <header>
+        <a href="index.html" class="brand">
+            <img class="brand-avatar" src="img/profile.jpeg" alt="Avatar">
+            <span class="brand-name">Beria Can</span>
+        </a>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="notes.html" class="active">Notes</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">Contact</a>
+            <button id="theme-toggle" class="theme-btn">☾ Dark Mode</button>
+        </nav>
+    </header>
+
+    <div class="wrap">
+        <main>
+            <h1>Notes</h1>
+            <p>Short reference notes I keep for myself — and anyone else who finds them useful. Focused cheat sheets, not full lectures.</p>
+
+            <section>
+                <h2>Physics</h2>
+                <ul class="note-list">
+                    <li class="note-empty">Notes coming soon.</li>
+                    <!--
+                    <li>
+                        <a href="notes/physics/four-vectors.html">Four-vectors cheat sheet</a>
+                        <span class="note-desc">Lorentz transforms, invariants, and quick checks</span>
+                    </li>
+                    -->
+                </ul>
+            </section>
+
+            <section>
+                <h2>Mathematics</h2>
+                <ul class="note-list">
+                    <li class="note-empty">Notes coming soon.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Computing &amp; HEP</h2>
+                <ul class="note-list">
+                    <li class="note-empty">Notes coming soon.</li>
+                </ul>
+            </section>
+        </main>
+        <footer style="text-align: center; margin-top: 4rem; margin-bottom: 2rem; color: var(--muted); font-size: 0.8rem;">
+        </footer>
+    </div>
+    <script src="js/theme.js"></script>
+</body>
+</html>
